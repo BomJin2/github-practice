@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #4f4f4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.todo {
+  width: 375px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  padding: 40px 25px;
+  background-color: white;
+}
+
+.todo-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.todo-subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  display: flex;
+  gap: 8px;
+  height: 44px;
+  margin-bottom: 16px;
+}
+
+.todo-input input {
+  flex-basis: 240px;
+  border-radius: 8px;
+  border: 1px solid #4f4f4f;
+  padding: 13.5px 16px;
+}
+
+.todo-input input::placeholder {
+  color: #acacac;
+  font-size: 14px;
+}
+
+.todo-input button {
+  flex-basis: 77px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  background-color: #4f4f4f;
+  color: white;
+  cursor: pointer;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(53, 56, 62, 0.05);
+  border: 1px solid #4f4f4f;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.todo-check {
+  margin-right: 15px;
+}
+
+.todo-check input {
+  display: none;
+}
+
+.todo-check input + label {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #4f4f4f;
+  background-color: white;
+  position: relative;
+}
+
+.todo-check input:checked + label::after {
+  content: "✔";
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-msg {
+  color: #35383e;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.todo-msg.completed {
+  text-decoration: line-through;
+}
+
+.todo-delete {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(53, 56, 62, 0.1);
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+}
