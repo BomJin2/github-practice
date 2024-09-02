@@ -15,7 +15,9 @@ export const useFetch = () => {
       try {
         isLoading(false);
         data(1);
-      } catch (e) {}
+      } catch (e) {
+        aa;
+      }
     };
   });
 };
